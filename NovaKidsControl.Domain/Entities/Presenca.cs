@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NovaKidsControl.Domain.Models
+namespace NovaKidsControl.Domain.Entities
 {
     public class Presenca
     {

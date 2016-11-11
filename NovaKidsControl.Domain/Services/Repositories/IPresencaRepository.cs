@@ -1,8 +1,8 @@
-﻿using NovaKidsControl.Domain.Models;
+﻿using NovaKidsControl.Domain.Entities;
 using System;
 
-namespace NovaKidsControl.Domain.Contracts.Repositories
-{
+namespace NovaKidsControl.Domain.Services.Repositories
+{ 
     public interface IPresencaRepository
     {
         Presenca Get( Guid id );
