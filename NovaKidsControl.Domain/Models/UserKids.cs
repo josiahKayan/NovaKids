@@ -14,5 +14,17 @@ namespace NovaKidsControl.Domain.Models
         public string HoraEntrada { get; set; }
         public string HorarioKids { get; set; }
         public string Matricula { get; set; }
+
+        public UserKids(int id, string name , string data, string horaEntrada, string horarioKids, string matricula)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Data = data;
+            this.HoraEntrada = horaEntrada;
+            this.HorarioKids = horarioKids;
+            this.Matricula = matricula;
+        }
+
+
     }
 }
