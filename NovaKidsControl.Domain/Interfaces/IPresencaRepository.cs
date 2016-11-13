@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NovaKidsControl.Domain.Interfaces
 {
-    public interface IUserKids : IRepositoryBase<UserKids>
+    public interface IPresencaRepository : IRepositoryBase<Presenca>
     {
     }
 }

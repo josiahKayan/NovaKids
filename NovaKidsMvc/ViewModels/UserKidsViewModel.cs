@@ -1,9 +1,13 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
-namespace NovaKidsControl.Domain.Entities
+namespace NovaKidsMvc.ViewModels
 {
-    public class UserKids
+    public class UserKidsViewModel
     {
+
         public virtual int Id { get; set; }
         public virtual string Nome { get; set; }
         public virtual string Data { get; set; }
@@ -11,7 +15,7 @@ namespace NovaKidsControl.Domain.Entities
         public virtual string HorarioKids { get; set; }
         public virtual string Matricula { get; set; }
 
-        public UserKids(int id, string nome , string data, string horaEntrada, string horarioKids, string matricula)
+        public UserKidsViewModel(int id, string nome, string data, string horaEntrada, string horarioKids, string matricula)
         {
             this.Id = id;
             this.Nome = nome;
@@ -20,7 +24,6 @@ namespace NovaKidsControl.Domain.Entities
             this.HorarioKids = horarioKids;
             this.Matricula = matricula;
         }
-
 
     }
 }

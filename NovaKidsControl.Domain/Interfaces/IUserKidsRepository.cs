@@ -7,7 +7,12 @@ using System.Threading.Tasks;
 
 namespace NovaKidsControl.Domain.Interfaces
 {
-    public interface IProfessor : IRepositoryBase<Professor>
+    public interface IUserKidsRepository : IRepositoryBase<UserKids>
     {
+
+        IEnumerable<UserKids> BuscaProfessorPorNome(string nome);
+
+        IEnumerable<UserKids> BuscaCriancaPorNome(string nome);
+
     }
 }

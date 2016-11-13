@@ -40,23 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\ICrianca.cs" />
-    <Compile Include="Interfaces\IProfessor.cs" />
+    <Compile Include="Interfaces\IPresencaRepository.cs" />
     <Compile Include="Interfaces\IRepositoryBase.cs" />
-    <Compile Include="Interfaces\IUserKids.cs" />
-    <Compile Include="Services\Repositories\ICrianca.cs" />
-    <Compile Include="Services\Repositories\IPresencaRepository.cs" />
-    <Compile Include="Services\Repositories\IProfessor.cs" />
     <Compile Include="Entities\Crianca.cs" />
     <Compile Include="Entities\Presenca.cs" />
     <Compile Include="Entities\Professor.cs" />
     <Compile Include="Entities\UserKids.cs" />
+    <Compile Include="Interfaces\IUserKidsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,6 +1,8 @@
-﻿using NovaKidsControl.Domain.Interfaces;
+﻿using NovaKids.Infra.Data.Context;
+using NovaKidsControl.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,14 +11,19 @@ namespace NovaKids.Infra.Data.Repositories
 {
     public class RepositoryBase<TEntity> : IDisposable, IRepositoryBase<TEntity> where TEntity : class
     {
+
+        protected NovaKidsContext db = new NovaKidsContext();
+
         public void Add(TEntity obj)
         {
-            throw new NotImplementedException();
+            db.Set<TEntity>().Add(obj);
+            db.SaveChanges();
         }
 
         public void Delete(TEntity obj)
         {
-            throw new NotImplementedException();
+            db.Set<TEntity>().Remove(obj);
+            db.SaveChanges();
         }
 
         public void Dispose()
@@ -26,17 +33,18 @@ namespace NovaKids.Infra.Data.Repositories
 
         public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return db.Set<TEntity>().ToList();
         }
 
         public TEntity GetById(int id)
         {
-            throw new NotImplementedException();
+            return db.Set<TEntity>().Find(id);
         }
 
         public void Update(TEntity obj)
         {
-            throw new NotImplementedException();
+            db.Entry(obj).State = EntityState.Modified;
+            db.SaveChanges();
         }
     }
 }
