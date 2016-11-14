@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ICriancaRepository.cs" />
     <Compile Include="Interfaces\IPresencaRepository.cs" />
+    <Compile Include="Interfaces\IProfessorRepository.cs" />
     <Compile Include="Interfaces\IRepositoryBase.cs" />
     <Compile Include="Entities\Crianca.cs" />
     <Compile Include="Entities\Presenca.cs" />

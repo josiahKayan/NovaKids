@@ -20,11 +20,19 @@ namespace NovaKids.Infra.Data.Repositories
             db.SaveChanges();
         }
 
+        public void AddProfessor(TEntity obj)
+        {
+            db.Set<TEntity>().Add(obj);
+            db.SaveChanges();
+        }
+
         public void Delete(TEntity obj)
         {
             db.Set<TEntity>().Remove(obj);
             db.SaveChanges();
         }
+
+
 
         public void Dispose()
         {

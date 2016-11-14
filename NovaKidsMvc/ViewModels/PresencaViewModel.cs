@@ -9,7 +9,7 @@ namespace NovaKidsMvc.ViewModels
     {
         public int Id { get; set; }
         public string Data { get; set; }
-        public string HorarioKids { get; set; }
+        public string Hora { get; set; }
         public UserKidsViewModel UserKids { get; set; }
 
     }

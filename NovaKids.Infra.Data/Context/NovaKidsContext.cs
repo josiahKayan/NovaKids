@@ -19,12 +19,17 @@ namespace NovaKids.Infra.Data.Context
         public DbSet<Crianca> Criancas { get; set; }
         public DbSet<Professor> Professores { get; set; }
         public DbSet<Presenca> Presencas { get; set; }
+        public DbSet<UserKids> UserKids { get; set; }
 
         protected override void OnModelCreating( DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            modelBuilder.Entity<UserKids>().ToTable("UserKids");
+            modelBuilder.Entity<Professor>().ToTable("Professores");
+            modelBuilder.Entity<Crianca>().ToTable("Criancas");
+            base.OnModelCreating(modelBuilder);
         }
 
 

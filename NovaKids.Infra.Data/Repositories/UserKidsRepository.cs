@@ -19,5 +19,15 @@ namespace NovaKids.Infra.Data.Repositories
         {
             return db.Professores.Where(p => p.Nome == nome);
         }
+
+        //public void AddCrianca(Crianca crianca)
+        //{
+        //    db.Criancas.Add(crianca);
+        //}
+
+        //public void AddProfessor(Professor professor)
+        //{
+        //    db.Professores.AddProfessor(professor);
+        //}
     }
 }
