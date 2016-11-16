@@ -44,22 +44,35 @@ namespace NovaKidsMvc.Controllers
 
                 var userkids = Mapper.Map<UserKidsViewModel,UserKids>(userKidsViewModel);
                 
-                _userKidsRepository.Add(userkids);
+                
 
                 if (userkids.Tipo.Equals("professor"))
                 {
                     Professor prof = new Professor();
-                    prof.Id = userkids.Id;
-                    
-                    _userKidsRepository.AddProfessor(prof);
+                    prof.Nome = userkids.Nome;
+                    prof.Senib = userkids.Senib;
+                    prof.Matricula = userkids.Matricula;
+                    prof.Tag = userkids.Tag;
+                    prof.HorarioKids = userkids.HorarioKids;
+                    prof.Kids = userkids.Kids;
+                    prof.Tipo = userkids.Tipo;
+                    //_userKidsRepository.Add(userkids);
+                    _userKidsRepository.Add(prof);
                 }
 
-                //if (userkids.Tipo.Equals("crianca"))
-                //{
-                //    Crianca crianca = new Crianca(userkids.Id, userkids.Nome, userkids.HorarioKids ,userkids.Senib,userkids.Kids, userkids.Matricula
-                //        , userkids.Tag, userkids.Tipo);
-                //    _userKidsRepository.AddCrianca(crianca);
-                //}
+                if (userkids.Tipo.Equals("crianca"))
+                {
+                    Crianca crianca = new Crianca();
+                    crianca.Nome = userkids.Nome;
+                    crianca.Senib = userkids.Senib;
+                    crianca.Matricula = userkids.Matricula;
+                    crianca.Tag = userkids.Tag;
+                    crianca.HorarioKids = userkids.HorarioKids;
+                    crianca.Kids = userkids.Kids;
+                    crianca.Tipo = userkids.Tipo;
+                    //_userKidsRepository.Add(userkids);
+                    _userKidsRepository.Add(crianca);
+                }
 
                 return RedirectToAction("Index");
             }

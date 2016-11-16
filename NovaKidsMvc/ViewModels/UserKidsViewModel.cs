@@ -5,7 +5,7 @@ using System.Web;
 
 namespace NovaKidsMvc.ViewModels
 {
-    public class UserKidsViewModel
+    public  class UserKidsViewModel
     {
 
         public virtual int Id { get; set; }
@@ -16,18 +16,6 @@ namespace NovaKidsMvc.ViewModels
         public virtual string Matricula { get; set; }
         public virtual string Tag { get; set; }
         public virtual string Tipo { get; set; }
-
-        //public UserKidsViewModel(int id, string nome, string horarioKids, int senib, string matricula, string tag, string tipo)
-        //{
-        //    this.Id = id;
-        //    this.Nome = nome;
-        //    this.HorarioKids = horarioKids;
-        //    this.Senib = senib;
-        //    this.Matricula = matricula;
-        //    this.Tag = tag;
-        //    this.Tipo = tipo;
-        //}
-
 
     }
 }

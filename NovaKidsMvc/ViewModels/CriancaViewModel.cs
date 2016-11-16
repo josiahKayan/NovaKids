@@ -16,17 +16,5 @@ namespace NovaKidsMvc.ViewModels
         public override string Matricula { get; set; }
         public override string Tag { get; set; }
         public override string Tipo { get; set; }
-
-        //public CriancaViewModel(int id, string nome, string horarioKids, int senib, string matricula, string tag, string tipo) : base(id, nome, horarioKids, senib, matricula, tag,tipo)
-        //{
-        //    this.Id = id;
-        //    this.Nome = nome;
-        //    this.HorarioKids = horarioKids;
-        //    this.Senib = senib;
-        //    this.Matricula = matricula;
-        //    this.Tag = tag;
-        //    this.Tipo = tipo;
-
-        //}
     }
 }

@@ -10,9 +10,11 @@ namespace NovaKidsControl.Domain.Interfaces
     public interface IUserKidsRepository : IRepositoryBase<UserKids>
     {
 
-        IEnumerable<UserKids> BuscaProfessorPorNome(string nome);
+        //IEnumerable<UserKids> BuscaProfessorPorNome(string nome);
 
-        IEnumerable<UserKids> BuscaCriancaPorNome(string nome);
+        //IEnumerable<UserKids> BuscaCriancaPorNome(string nome);
 
+        //void AddProfessor(Professor professor);
+      
     }
 }
