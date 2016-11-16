@@ -5,11 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NovaKidsControl.Domain.Interfaces
+namespace NovaKidsControl.Domain.Interfaces.Repositories
 {
-    public interface ICriancaRepository : IRepositoryBase<Crianca>
+    public interface IProfessorRepository : IRepositoryBase<Professor>
     {
-
-
     }
 }

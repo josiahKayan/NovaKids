@@ -1,5 +1,6 @@
 ﻿using NovaKids.Infra.Data.Context;
 using NovaKidsControl.Domain.Interfaces;
+using NovaKidsControl.Domain.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NovaKidsControl.Domain.Interfaces
+namespace NovaKidsControl.Domain.Interfaces.Repositories
 {
     public interface IUserKidsRepository : IRepositoryBase<UserKids>
     {

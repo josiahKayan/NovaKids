@@ -1,0 +1,74 @@
+﻿@model NovaKidsMvc.ViewModels.UserKidsViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserKidsViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HorarioKids)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HorarioKids)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Senib)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Senib)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kids)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kids)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

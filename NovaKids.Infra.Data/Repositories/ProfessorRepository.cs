@@ -1,6 +1,7 @@
 ﻿using NovaKids.Infra.Data.Repositories;
 using NovaKidsControl.Domain.Entities;
 using NovaKidsControl.Domain.Interfaces;
+using NovaKidsControl.Domain.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

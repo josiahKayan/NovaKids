@@ -41,22 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\ICriancaRepository.cs" />
-    <Compile Include="Interfaces\IPresencaRepository.cs" />
-    <Compile Include="Interfaces\IProfessorRepository.cs" />
-    <Compile Include="Interfaces\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repositories\ICriancaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IPresencaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProfessorRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
     <Compile Include="Entities\Crianca.cs" />
     <Compile Include="Entities\Presenca.cs" />
     <Compile Include="Entities\Professor.cs" />
     <Compile Include="Entities\UserKids.cs" />
-    <Compile Include="Interfaces\IUserKidsRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUserKidsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
+    <Folder Include="Interfaces\Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
