@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using NovaKids.Application;
+using NovaKids.Application.Interface;
 using NovaKids.Infra.Data.Repositories;
 using NovaKidsControl.Domain.Entities;
 using NovaKidsMvc.ViewModels;
@@ -12,6 +14,12 @@ namespace NovaKidsMvc.Controllers
 {
     public class UserKidsController : Controller
     {
+        private readonly IUserKidsAppService _userApp;
+
+        public UserKidsController(IUserKidsAppService user)
+        {
+            _userApp = user;
+        }
 
         private readonly UserKidsRepository _userKidsRepository = new UserKidsRepository();
 

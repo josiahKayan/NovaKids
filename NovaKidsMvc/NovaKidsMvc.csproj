@@ -247,6 +247,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NovaKids.Application\NovaKids.Application.csproj">
+      <Project>{E6096084-1E75-4EDC-B77E-36A027DA1989}</Project>
+      <Name>NovaKids.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NovaKids.Infra.Data\NovaKids.Infra.Data.csproj">
       <Project>{6D29271F-6E94-41ED-91F9-A953D61F389F}</Project>
       <Name>NovaKids.Infra.Data</Name>
