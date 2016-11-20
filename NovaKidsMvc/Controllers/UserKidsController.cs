@@ -21,12 +21,12 @@ namespace NovaKidsMvc.Controllers
             _userKidsAppService = userAppService;
         }
 
-        private readonly UserKidsRepository _userKidsRepository = new UserKidsRepository();
+        //private readonly UserKidsRepository _userKidsRepository = new UserKidsRepository();
 
         // GET: UserKids
         public ActionResult Index()
         {
-            var userkidsViewModel = Mapper.Map<IEnumerable<UserKids>, IEnumerable<UserKidsViewModel>>(_userKidsRepository.GetAll());
+            var userkidsViewModel = Mapper.Map<IEnumerable<UserKids>, IEnumerable<UserKidsViewModel>>(_userKidsAppService.GetAll());
             return View(userkidsViewModel);
         }
 
@@ -49,10 +49,7 @@ namespace NovaKidsMvc.Controllers
             try
             {
                 // TODO: Add insert logic here
-
                 var userkids = Mapper.Map<UserKidsViewModel,UserKids>(userKidsViewModel);
-                
-                
 
                 if (userkids.Tipo.Equals("professor"))
                 {
@@ -64,7 +61,7 @@ namespace NovaKidsMvc.Controllers
                     prof.HorarioKids = userkids.HorarioKids;
                     prof.Kids = userkids.Kids;
                     prof.Tipo = userkids.Tipo;
-                    _userKidsAppService.Add(userkids);
+                    _userKidsAppService.Add(prof);
                 }
 
                 if (userkids.Tipo.Equals("crianca"))

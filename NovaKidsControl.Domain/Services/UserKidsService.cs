@@ -16,25 +16,24 @@ namespace NovaKidsControl.Domain.Services
             _userRepository = repository;
         }
 
-
-        public new void Add(UserKids obj)
+        public void Add(UserKids obj)
         {
             _userRepository.Add(obj);
         }
 
         public new void Delete(UserKids obj)
         {
-            throw new NotImplementedException();
+            _userRepository.Delete(obj);
         }
 
         public new void Update(UserKids obj)
         {
-            throw new NotImplementedException();
+            _userRepository.Update(obj);
         }
 
         IEnumerable<UserKids> IServiceBase<UserKids>.GetAll()
         {
-            throw new NotImplementedException();
+            return  _userRepository.GetAll();
         }
 
         UserKids IServiceBase<UserKids>.GetById(int id)

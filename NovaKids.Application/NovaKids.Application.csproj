@@ -46,6 +46,7 @@
     <Compile Include="Interface\IProfessorAppService.cs" />
     <Compile Include="Interface\IUserKidsAppService.cs" />
     <Compile Include="PresencaAppService.cs" />
+    <Compile Include="ProfessorAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserKidsAppService.cs" />
   </ItemGroup>
