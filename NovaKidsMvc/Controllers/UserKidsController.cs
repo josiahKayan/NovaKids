@@ -14,11 +14,11 @@ namespace NovaKidsMvc.Controllers
 {
     public class UserKidsController : Controller
     {
-        private readonly IUserKidsAppService _userApp;
+        private readonly IUserKidsAppService _userKidsAppService;
 
-        public UserKidsController(IUserKidsAppService user)
+        public UserKidsController(IUserKidsAppService userAppService)
         {
-            _userApp = user;
+            _userKidsAppService = userAppService;
         }
 
         private readonly UserKidsRepository _userKidsRepository = new UserKidsRepository();
@@ -64,8 +64,7 @@ namespace NovaKidsMvc.Controllers
                     prof.HorarioKids = userkids.HorarioKids;
                     prof.Kids = userkids.Kids;
                     prof.Tipo = userkids.Tipo;
-                    //_userKidsRepository.Add(userkids);
-                    _userKidsRepository.Add(prof);
+                    _userKidsAppService.Add(userkids);
                 }
 
                 if (userkids.Tipo.Equals("crianca"))
@@ -78,8 +77,7 @@ namespace NovaKidsMvc.Controllers
                     crianca.HorarioKids = userkids.HorarioKids;
                     crianca.Kids = userkids.Kids;
                     crianca.Tipo = userkids.Tipo;
-                    //_userKidsRepository.Add(userkids);
-                    _userKidsRepository.Add(crianca);
+                    _userKidsAppService.Add(userkids);
                 }
 
                 return RedirectToAction("Index");

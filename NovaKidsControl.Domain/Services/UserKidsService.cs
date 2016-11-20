@@ -16,19 +16,18 @@ namespace NovaKidsControl.Domain.Services
             _userRepository = repository;
         }
 
-        
 
-        public void Add(UserKids obj)
+        public new void Add(UserKids obj)
+        {
+            _userRepository.Add(obj);
+        }
+
+        public new void Delete(UserKids obj)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(UserKids obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(UserKids obj)
+        public new void Update(UserKids obj)
         {
             throw new NotImplementedException();
         }

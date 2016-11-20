@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NovaKids.Application.Interface
 {
-    interface IPresencaAppService : IAppServiceBase<Presenca>
+    public interface IPresencaAppService : IAppServiceBase<Presenca>
     {
     }
 }
