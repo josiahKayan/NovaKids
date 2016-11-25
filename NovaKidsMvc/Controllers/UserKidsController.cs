@@ -21,8 +21,7 @@ namespace NovaKidsMvc.Controllers
             _userKidsAppService = userAppService;
         }
 
-        //private readonly UserKidsRepository _userKidsRepository = new UserKidsRepository();
-
+        
         // GET: UserKids
         public ActionResult Index()
         {
@@ -88,7 +87,18 @@ namespace NovaKidsMvc.Controllers
         // GET: UserKids/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            UserKidsViewModel v = new UserKidsViewModel();
+
+            UserKids userKids = _userKidsAppService.GetById(id);
+            v.Id = userKids.Id;
+            v.Kids = userKids.Kids;
+            v.Matricula = userKids.Matricula;
+            v.HorarioKids = userKids.HorarioKids;
+            v.Nome = userKids.Nome;
+            v.Senib = userKids.Senib;
+            v.Tag = userKids.Tag;
+            v.Tipo = userKids.Tipo;
+            return View(v);
         }
 
         // POST: UserKids/Edit/5
@@ -110,7 +120,10 @@ namespace NovaKidsMvc.Controllers
         // GET: UserKids/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            UserKids userKids = _userKidsAppService.GetById(id);
+            _userKidsAppService.Delete(userKids);
+
+            return RedirectToAction("Index");
         }
 
         // POST: UserKids/Delete/5

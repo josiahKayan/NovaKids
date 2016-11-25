@@ -38,7 +38,7 @@ namespace NovaKidsControl.Domain.Services
 
         UserKids IServiceBase<UserKids>.GetById(int id)
         {
-            throw new NotImplementedException();
+            return _userRepository.GetById(id);
         }
     }
 }
