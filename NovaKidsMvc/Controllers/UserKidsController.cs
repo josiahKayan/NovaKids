@@ -32,7 +32,19 @@ namespace NovaKidsMvc.Controllers
         // GET: UserKids/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            UserKidsViewModel v = new UserKidsViewModel();
+
+            UserKids userKids = _userKidsAppService.GetById(id);
+            //Converter aqui depois para ViewModel
+            v.Id = userKids.Id;
+            v.Kids = userKids.Kids;
+            v.Matricula = userKids.Matricula;
+            v.HorarioKids = userKids.HorarioKids;
+            v.Nome = userKids.Nome;
+            v.Senib = userKids.Senib;
+            v.Tag = userKids.Tag;
+            v.Tipo = userKids.Tipo;
+            return View(v);
         }
 
         // GET: UserKids/Create
@@ -90,6 +102,7 @@ namespace NovaKidsMvc.Controllers
             UserKidsViewModel v = new UserKidsViewModel();
 
             UserKids userKids = _userKidsAppService.GetById(id);
+            //Converter aqui depois para ViewModel
             v.Id = userKids.Id;
             v.Kids = userKids.Kids;
             v.Matricula = userKids.Matricula;
@@ -107,7 +120,17 @@ namespace NovaKidsMvc.Controllers
         {
             try
             {
-                // TODO: Add update logic here
+                UserKids userKids = _userKidsAppService.GetById(id);
+                //Converter aqui depois para ViewModel
+                userKids.Id = int.Parse(collection.Get("Id")) ;
+                userKids.Kids = collection.Get("Kids");
+                userKids.Matricula = collection.Get("Matricula");
+                userKids.HorarioKids = collection.Get("HorarioKids");
+                userKids.Nome = collection.Get("Nome");
+                userKids.Senib = int.Parse(collection.Get("Senib"));
+                userKids.Tag = collection.Get("Tag");
+                userKids.Tipo = collection.Get("Tipo");
+                _userKidsAppService.Update(userKids);
 
                 return RedirectToAction("Index");
             }
