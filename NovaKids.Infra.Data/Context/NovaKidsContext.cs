@@ -29,9 +29,10 @@ namespace NovaKids.Infra.Data.Context
             //modelBuilder.Entity<UserKids>().ToTable("UserKids");
             modelBuilder.Entity<Professor>().ToTable("Professores");
             modelBuilder.Entity<Crianca>().ToTable("Criancas");
+            modelBuilder.Entity<Presenca>().ToTable("Presenca");
             base.OnModelCreating(modelBuilder);
         }
 
-
+        //public System.Data.Entity.DbSet<NovaKidsMvc.ViewModels.PresencaViewModel> PresencaViewModels { get; set; }
     }
 }

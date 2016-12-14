@@ -85,7 +85,7 @@ namespace NovaKidsMvc.Controllers
                     crianca.HorarioKids = userkids.HorarioKids;
                     crianca.Kids = userkids.Kids;
                     crianca.Tipo = userkids.Tipo;
-                    _userKidsAppService.Add(userkids);
+                    _userKidsAppService.Add(crianca);
                 }
 
                 return RedirectToAction("Index");
